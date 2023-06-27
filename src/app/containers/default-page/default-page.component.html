@@ -1,0 +1,30 @@
+<!-- <c-nav class="thick-navbar">
+  <c-nav-item>
+    <a [active]="true" cNavLink routerLink="./">
+      Active
+    </a>
+  </c-nav-item>
+  <c-nav-item>
+    <a cNavLink routerLink="./">Link</a>
+  </c-nav-item>
+  <c-nav-item>
+    <a cNavLink routerLink="./">Link</a>
+  </c-nav-item>
+  <c-nav-item>
+    <a [disabled]="true" cNavLink routerLink="./">
+      Disabled
+    </a>
+  </c-nav-item>
+</c-nav> -->
+<div class="header">
+  <app-nav-page></app-nav-page>
+</div>
+<div class="carousel" >
+  <c-carousel (itemChange)="onItemChange($event)" [interval]="7000" transition="slide">
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides[0]">
+        <img [src]="slide.src" alt="{{slide.title}}" class="d-block w-100" loading="lazy" />
+      </c-carousel-item>
+    </c-carousel-inner>
+  </c-carousel>
+</div>
